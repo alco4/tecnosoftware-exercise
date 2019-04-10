@@ -4,8 +4,8 @@
 
 In the root directory:
 
-* npm install
-* npm start
+* sudo npm install
+* sudo npm start
 
 localhost:8000
 
