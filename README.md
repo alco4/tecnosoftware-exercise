@@ -5,7 +5,7 @@
 In the root directory:
 
 * sudo npm install
-* sudo npm start
+* npm start
 
 localhost:8000
 
