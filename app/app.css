@@ -1,0 +1,230 @@
+body {
+  background-color: #C0C0C0;
+}
+
+ul li {
+  height: 60px;
+  list-style: none;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu>li {
+  display: inline;
+}
+
+.menu>li+li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+/* Companies component css stylesheet */
+
+.companies-header {
+  background-color: #06083F;
+  height: 40px;
+  color: white;
+  font-size: 12px;
+}
+
+.search-company {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.search-company input {
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  border-radius: 14px;
+  border: 1px solid #000000;
+  padding: 0 4px 0 4px;
+  text-indent: 25px;
+}
+
+.search-company img {
+  position: absolute;
+  top: 61px;
+  right: 191px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.search-company span {
+  position: absolute;
+  top: 62px;
+  right: 14px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+@media (max-width: 600px) {
+  .search-company img {
+    top: 61px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+ 
+  }
+  .search-company input {
+    width: 100%
+  }
+}
+
+.companies-title {
+  padding: 10px;
+}
+
+.companies-body {
+  background-color: white;
+  width: 100%;
+  min-height: 400px;
+}
+
+.title-list {
+  color: #363651;
+  padding-left: 20px;
+}
+
+.header-list {
+  width: 100%;
+  background-color: #E4E4E4;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.title-name {
+  padding-left: 20px;
+}
+
+.title-location {
+  padding-right: 50px;
+}
+
+.companies-list {
+  padding-left: 20px;
+}
+
+.company-name {
+  float: left;
+  margin-left: 10px;
+}
+
+.company-location {
+  float: right;
+  margin-right: 60px;
+}
+
+/* Detail */
+
+.detail-company {
+  width: 100%;
+  background-color: white;
+  color: #373645;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.detail-company img {
+  margin-left: 10px;
+  width: 30px;
+}
+
+.data-company {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 60px;
+  margin-left: 100px;
+}
+
+@media (max-width: 600px) {
+  .data-company {
+    flex-direction: column;
+    margin-left: 50px;
+  }
+}
+
+.detail-header {
+  padding-left: 60px;
+  color: #23214A;
+}
+
+@media (max-width: 600px) {
+  .detail-header {
+    padding-left: 10px;
+  }
+}
+
+.item-detail {
+  font-size: 15px;
+  height: 50px;
+  width: 33%;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .item-detail {
+    width: 100%;
+  }
+}
+
+.data-products {
+  margin-left: 100px;
+}
+
+@media (max-width: 600px) {
+  .data-products {
+    margin-left: 50px;
+  }
+}
+
+.data-clients {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 60px;
+  margin-left: 100px;
+  justify-content: space-around;
+}
+
+@media (max-width: 600px) {
+  .data-clients {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .data-clients .item-detail {
+    margin-left: 10px;
+    width: 40%;
+  }
+  .ng-scope {
+    justify-content: center;
+  }
+}
+
+.data-clients .ng-scope {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}

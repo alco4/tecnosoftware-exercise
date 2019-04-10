@@ -1,0 +1,67 @@
+<div id="companies">
+  <div class="companies-body">
+    <div class="companies-header">
+      <h3 class="companies-title">TecnoEmpresas</h3>
+    </div>
+      <div class="search-company">
+        
+        <img class="detail-ico" src="assets/img/ico_search.png" /> 
+        <input type="search" ng-model="searchCompany"/>
+        <span class="fas fa-times-circle"></span>
+        
+      </div>
+    <div>
+      <h3 class="title-list">Empresas</h3>
+    </div>
+    <div class="companies-container">
+      <div class="header-list">
+        <div class="title-name">Nombre de la empresa</div>
+        <div class="title-location">Ubicación</div></span>
+      </div>
+      <ul class="companies-list">
+        <div ng-style="showDetail && {'border':'1px solid #878787'}" ng-repeat="(key, company) in companies | filter:searchCompany">
+          <li ng-click="showDetail = !showDetail;">
+            <p class='company-name'> {{company.name}}</p>
+            <p class='company-location'>{{company.offices[0].address.split(',')[1]}}</p>
+          </li>
+          <div class="detail-company" ng-if="showDetail">
+            <div class="detail-header">
+              <h4>Datos de la empresa<img class="detail-ico" src="assets/img/ico_company.png" /></h4>
+            </div>
+            <div class="data-company">
+              <div class="item-detail"><b>Nombre: </b>{{company.name}}</div>
+              <div class="item-detail"><b>Telefono: </b>{{company.offices[0].country}}</div>
+              <div class="item-detail"><b>País: </b>{{company.offices[0].phone}}</div>
+              <div class="item-detail"><b>Dirección: </b>{{company.offices[0].address.split(',')[0]}}</div>
+            </div>
+            <div class="detail-header">
+              <h4>Productos<img class="detail-ico" src="assets/img/ico_products.png" /></h4>
+            </div>
+            <div class="data-products">
+              <div ng-repeat="product in products[key]">
+                <div ng-repeat="(key,product) in product.result.productos">
+                  <div class="item-detail"><b>Producto {{key}}: </b>{{product.name.split(' ')[0]}}
+                    {{product.name.split(' ')[1]}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="detail-header">
+              <h4>Clientes<img class="detail-ico" src="assets/img/ico_clients.png" /></h4>
+            </div>
+            <div class="data-clients">
+              <div ng-repeat="client in clients[key]">
+                <div ng-repeat="(key,client) in client.result.clients">
+                  <div class="item-detail"><b>Nombre: </b> {{client.name.split(' ')[0]}} {{client.name.split(' ')[1]}}
+                  </div>
+                  <div class="item-detail"><b>Teléfono: </b> {{client.offices[0].phone}}</div>
+                  <div class="item-detail"><b>País: </b> {{client.offices[0].country}} </div>
+                  <div class="item-detail"><b>Dirección: </b>{{client.offices[0].address.split(',')[0]}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
